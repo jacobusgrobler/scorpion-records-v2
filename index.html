@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scorpion Records</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop playsinline>
+      <source src="video/background-vid-studio.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- OPTIONAL DARK OVERLAY -->
+    <!-- <div class="overlay"></div> -->
+
+    <!-- CONTENT -->
+    <div class="hero-content">
+      <h1>Scorpion Records</h1>
+
+      <h3>
+        Music Culture Forever             
+      </h3>
+
+      <img class="floating-images" src="images/blond-girl-singing.jpg" alt="girl on stage">
+      
+      <img class="floating-images" src="images/blond-girl-taller-guy-singing.jpg" alt="girl and man on stage">
+      
+      <p class="slide-right">MIXING and MASTERING</p>
+
+      <img class="floating-images" id="logo" src="images/music-culture-forever-portrate.jpeg" alt="graphic art stating music culture Forever">
+
+      <p class="slide-left">BRANDING and DISTRIBUTION</p>
+
+      <img class="floating-images" src="images/presenter-with-all-the-ladies.jpg" alt="multiple people on stage">
+
+      <img class="floating-images" src="images/whole-gang-on-stage-close-up-looking-left.jpg" alt="music group on stage">
+
+      <p class="slide-right">PODCAST PRODUCTION</p>
+      
+      <img class="floating-images" src="images/presenter-on-stage.jpg" alt="presenter on stage">
+      
+      <img class="floating-images" src="images/domingo-on-stage.jpg" alt="man giving speech on stage">
+
+      <p class="slide-left">TALENT DEVELOPMENT</p>
+      
+      <img class="floating-images" src="images/short-guy-singing.jpg" alt="man on stage">
+    </div>
+
+    
+    <div class="hero-content social-links">
+      
+      <p class="slide-right section-heading" id="how-it-started">HOW IT STARTED</p>
+
+      <a href="video/background-vid-studio.mp4" target="_blank">
+        <img
+          class="youtube-thumbnail"
+          src="images/our-launch.png"
+          alt="Our Launch">
+      </a>
+      
+        <a href="https://www.youtube.com/shorts/XUAZfk8Q_kQ" target="_blank">
+            <img
+              class="youtube-thumbnail"
+              src="https://img.youtube.com/vi/XUAZfk8Q_kQ/maxresdefault.jpg"
+              alt="YouTube Short">
+          </a>
+          
+          <a href="https://www.youtube.com/shorts/zEMutw-IDtE" target="_blank">
+            <img
+              class="youtube-thumbnail"
+              src="https://img.youtube.com/vi/zEMutw-IDtE/maxresdefault.jpg"
+              alt="YouTube Short">
+          </a>
+          
+          <a href="https://www.youtube.com/shorts/LJngTMC6cO8" target="_blank">
+            <img
+            class="youtube-thumbnail"
+              src="https://img.youtube.com/vi/LJngTMC6cO8/maxresdefault.jpg"
+              alt="YouTube Short">
+          </a>
+
+          <p class="slide-left">Reach out to us and reach your future</p>
+          <p class="slide-right">bookings@<br>scorpionrecords.co.za</p>
+
+  </section>
+</body>
+            <script>
+            
+              const animatedText = document.querySelectorAll('.slide-left, .slide-right');
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                  }
+                });
+              }, {
+                threshold: 0.1
+              });
+              animatedText.forEach((element) => {
+                observer.observe(element);
+              });
+              
+              </script>
+</html>

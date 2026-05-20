@@ -1,0 +1,20 @@
+mixing
+mastering
+branding
+distribution
+podcast production
+
+links
+https://www.facebook.com/thejournalistdj/videos/theres-a-brand-new-music-label-in-town-called-scorpion-records-check-them-out-on/2397637610664083/
+
+https://www.youtube.com/shorts/XUAZfk8Q_kQ
+https://www.youtube.com/shorts/zEMutw-IDtE
+https://www.youtube.com/shorts/LJngTMC6cO8
+
+Styling
+Got it—let’s make it pop! 🚀 
+Since it’s static, lean into smooth scroll animations, parallax effects, or hover-triggered transitions using CSS libraries like Animate.css or AOS (Animate On Scroll).
+You could add a sleek dark mode toggle, subtle gradient overlays on images, or a floating audio player mockup. 
+Try CSS grid or flexbox for dynamic layouts that feel alive. Even a simple text reveal on scroll or glitch text effects can add edge. 
+Want that music-industry sleekness? Think bold typography, 
+video backgrounds of studio sessions, and micro-interactions—like buttons that ripple when clicked. 🎨✨
