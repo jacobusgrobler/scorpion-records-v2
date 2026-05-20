@@ -1,251 +1,226 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    /* font-family: Arial, sans-serif; */
-    overflow-x: hidden;
-    color: white;
-  }
-  
-  /* MAIN SECTION */
-  .hero {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-  
-  /* FIXED VIDEO BACKGROUND */
-  .hero video {
-    position: fixed;
-    top: 0;
-    left: 0;
-  
-    width: 100%;
-    height: 100%;
-  
-    object-fit: cover;
-    z-index: -2;
-  }
-  
-  /* DARK OVERLAY */
-  .overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45); 
-    z-index: -1;
-  }
-  
-  /* CONTENT OVER VIDEO */
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  
-    width: 100%;
-    padding: 60px 20px;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h1 {
-    font-family: 'Bungee Tint', sans-serif;
-  }
-  
-  /* TEXT */
-  .hero-content h1 {
-    font-family: 'Bungee Tint';
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .hero-content h3 {
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    font-family: 'Bungee Tint';
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: 80px;
-    line-height: 1.6;
-  }
-
-  /* ANIMATED PARAGRAPHS */
-.hero-content p {
-  font-family: 'Bungee Tint', sans-serif;
-  font-size: clamp(1.5rem, 3vw, 3rem);
-  font-weight: bold;
-  letter-spacing: 4px;
-  text-align: center;
-  color: white;
-  margin: 120px 0;
-  line-height: 1.4;
-  opacity: 0;
-  transition:
-  opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1),
-  transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
-  text-shadow:
-    0 0 10px rgba(255,255,255,0.3),
-    0 0 20px rgba(255,255,255,0.2);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* FROM RIGHT */
-.slide-right {
-  transform: translateX(250px);
-}
-
-/* FROM LEFT */
-.slide-left {
-  transform: translateX(-250px);
-}
-
-.slide-left.active,
-.slide-right.active {
-
-  opacity: 1;
-
-  transform: translateX(0);
-}
-  
-  /* FLOATING IMAGES */
-  .floating-images {
-    width: 90%;
-    max-width: 1000px;
-  
-    height: auto;
-    object-fit: cover;
-  
-    margin-bottom: 120px;
-  
-    border-radius: 20px;
-  
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  
-    transition: transform 0.4s ease;
-  }
-
-  #logo {
-    max-width: 30%;
-    max-height: 80%;
-  }
-  
-  /* OPTIONAL HOVER EFFECT */
-  .floating-images:hover {
-    transform: scale(1.02);
-  }
-
-  /* SOCIAL SECTION HEADING */
-.section-heading {
+html,
+body {
   width: 100%;
-  text-align: center;
-  font-family: 'Bungee Tint', sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  margin-bottom: 60px;
-  letter-spacing: 6px;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: black;
   color: white;
-  text-shadow:
-    0 0 10px rgba(255,255,255,0.3),
-    0 0 20px rgba(255,255,255,0.2);
 }
 
-  /* SOCIAL LINK CONTAINER */
-.social-links {
-    display: flex;
-    flex-direction: row;
+/* =========================
+   FIXED TOP BAR
+========================= */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 55px;
+  width: 55px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SPLIT LAYOUT
+========================= */
+
+.split-layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT PANEL
+========================= */
+
+.left-panel {
+  width: 66.666%;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.55)
+    ),
+    url("images/music-culture-forever-portrate.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.left-content {
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.left-content h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  margin-bottom: 20px;
+}
+
+.left-content h3 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  margin-bottom: 30px;
+}
+
+.left-content p {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  line-height: 1.8;
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.right-panel {
+  width: 33.333%;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  background: #050505;
+  padding: 20px;
+  scrollbar-width: thin;
+}
+
+.scroll-item {
+  margin-bottom: 25px;
+}
+
+.scroll-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease;
+}
+
+.scroll-item img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================
+   MOBILE LAYOUT
+========================= */
+
+@media (max-width: 768px) {
+
+  .split-layout {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    top: 0;
+    background-size: cover;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+
+  .scroll-item {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .top-bar {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
     justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
+  }
+
+  .logo img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    gap: 18px;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 40px 20px 100px;
+    justify-content: center;
   }
 
-  .social-links a:focus,
-  .social-links a:active {
-    outline: none;
-    border: none;
-
+  .menu a {
+    font-size: 0.9rem;
+  }
+  .left-content h1 {
+    font-size: 2.8rem;
+  }
 }
-  
-  /* CLICKABLE ICONS */
-  .youtube-thumbnail {
-    width: 100%;
-    max-width: 260px;
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    transition:
-      transform 0.4s ease,
-      opacity 0.4s ease;      
-  }
-  
-  /* HOVER EFFECT */
-  .youtube-thumbnail:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
-  }
-  
-  /* MOBILE */
-  @media (max-width: 768px) {
-  
-    img,
-    video {
-      display: block;
-    }
-
-    .hero-content {
-      padding: 40px 15px;
-    }
-  
-    .floating-images {
-      width: 95%;
-      margin-bottom: 80px;
-      border-radius: 14px;
-    }
-  
-    .hero-content p {
-      font-size: small;
-      margin-bottom: 60px;
-      margin-top: 20px;
-    }
-
-    .slide-right {
-      transform: translateX(60px);
-    }
-  
-    .slide-left {
-      transform: translateX(-60px);
-    }
-
-    .youtube-thumbnail {
-      /* width: 100%; */
-      max-width: 190px;
-      margin: 0 auto 60px;
-      display: block; 
-      }
-    
-      .social-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        /* width: 80%; */
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .social-links a {
-        -webkit-tap-highlight-color: transparent;
-      }
-  }
