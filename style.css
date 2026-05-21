@@ -274,6 +274,10 @@ body {
     white-space: nowrap;
   }
   /* services page */
+  .services-container {
+    padding-top: 5%;
+  }
+
   .services {
     margin-top: 5%;
     font-size: clamp(2.0rem, 5vw, 4rem);
