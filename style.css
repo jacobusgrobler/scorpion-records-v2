@@ -273,4 +273,8 @@ body {
     font-size: 0.85rem;  
     white-space: nowrap;
   }
+  /* services page */
+  .services {
+    font-size: clamp(2.0rem, 5vw, 4rem);
+  }
 }
