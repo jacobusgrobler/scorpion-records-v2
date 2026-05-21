@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/logo-name-square.jpeg">
     <title>Our Services</title>
@@ -20,12 +23,19 @@
       <a href="services.html">Services and Music</a>
     </nav>
   </header>
-  
-<body>
-    
-</body>
-<script>
-            
+
+  <body>
+
+    <div class="services-container">
+        <h2 class="services slide-right">Mixing</h2>
+        <h2 class="services slide-left">Mastering</h2>
+        <h2 class="services slide-right">Branding</h2>
+        <h2 class="services slide-left">Distribution</h2>
+        <h2 class="services slide-right">Podcast Production</h2>
+        <h2 class="services slide-left">Talent Development</h2>
+    </div>
+
+<script>      
     const animatedText = document.querySelectorAll('.slide-left, .slide-right');
     const observer = new IntersectionObserver((entries) => {
      entries.forEach((entry) => {
@@ -38,7 +48,9 @@
        });
      animatedText.forEach((element) => {
      observer.observe(element);
-     });
-            
+     });            
   </script>
+
+</body>
+
 </html>
