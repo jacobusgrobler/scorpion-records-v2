@@ -275,6 +275,7 @@ body {
   }
   /* services page */
   .services {
+    margin-top: 5%;
     font-size: clamp(2.0rem, 5vw, 4rem);
   }
 }
