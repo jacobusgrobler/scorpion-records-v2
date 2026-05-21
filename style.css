@@ -215,35 +215,45 @@ body {
   }
 
   .top-bar {
-    height: auto;
-    padding: 15px;
-    flex-direction: column;
-    gap: 15px;
+    height: 80px;
+    padding: 0 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
   }
 
   .logo {
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .logo img {
-    height: 45px;
-    width: 45px;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 14px;
   }
 
   .logo h1 {
-    font-size: 1.2rem;
+    display: none;
   }
 
   .menu {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;  
+    flex-wrap: nowrap;
   }
 
   .menu a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;  
+    white-space: nowrap;
   }
-  .left-content h1 {
+
+  /* .left-content h1 {
     font-size: 2.8rem;
-  }
+  } */
 }
