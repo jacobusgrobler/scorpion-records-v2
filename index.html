@@ -21,9 +21,9 @@
     </div>
 
     <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">Contact</a>
-      <a href="#">Services and Music</a>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="services.html">Services and Music</a>
     </nav>
   </header>
 
@@ -36,16 +36,7 @@
       <div class="left-overlay"></div>
 
       <div class="left-content">
-        <!-- <h1>Scorpion Records</h1>
-
-        <h3>
-          Music Culture Forever
-        </h3>
-
-        <p>
-          Mixing, mastering, branding,
-          podcast production and artist development.
-        </p> -->
+        
       </div>
 
     </section>
@@ -53,32 +44,38 @@
     <!-- RIGHT SECTION -->
     <section class="right-panel">
 
+      <div class="scroll-item" id="video-link">
+        <a href="video/background-vid-studio.mp4">
+          <img src="images/our-launch.png" alt="picture of logo">
+        </a>
+      </div>
+
       <div class="scroll-item">
         <img src="images/blond-girl-singing.jpg" alt="">
       </div>
-
+      
       <div class="scroll-item">
-        <img src="images/blond-girl-taller-guy-singing.jpg" alt="">
+        <img src="images/blond-girl-taller-guy-singing.jpg" alt="people on stage acting and singing">
       </div>
 
       <div class="scroll-item">
-        <img src="images/presenter-with-all-the-ladies.jpg" alt="">
+        <img src="images/presenter-with-all-the-ladies.jpg" alt="people on stage acting and singing">
       </div>
 
       <div class="scroll-item">
-        <img src="images/whole-gang-on-stage-close-up-looking-left.jpg" alt="">
+        <img src="images/whole-gang-on-stage-close-up-looking-left.jpg" alt="people on stage acting and singing">
       </div>
 
       <div class="scroll-item">
-        <img src="images/presenter-on-stage.jpg" alt="">
+        <img src="images/presenter-on-stage.jpg" alt="people on stage acting and singing">
       </div>
 
       <div class="scroll-item">
-        <img src="images/domingo-on-stage.jpg" alt="">
+        <img src="images/short-guy-singing.jpg" alt="people on stage acting and singing">
       </div>
 
       <div class="scroll-item">
-        <img src="images/short-guy-singing.jpg" alt="">
+        <img src="images/tall-guy-short-guy-blond-girl-singing-action.jpg" alt="people on stage acting and singing">
       </div>
 
     </section>
@@ -86,21 +83,21 @@
   </main>
 
 </body>
-            <script>
+    <script>
             
-              const animatedText = document.querySelectorAll('.slide-left, .slide-right');
-              const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                  }
-                });
-              }, {
-                threshold: 0.1
-              });
-              animatedText.forEach((element) => {
-                observer.observe(element);
-              });
+      const animatedText = document.querySelectorAll('.slide-left, .slide-right');
+      const observer = new IntersectionObserver((entries) => {
+       entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+       }
+      });
+      }, {
+          threshold: 0.1
+         });
+       animatedText.forEach((element) => {
+       observer.observe(element);
+       });
               
-              </script>
+    </script>
 </html>

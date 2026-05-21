@@ -9,6 +9,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
+  /* font-family: 'Bungee Tint', sans-serif; */
   background: black;
   color: white;
 }
@@ -143,6 +144,17 @@ body {
   background: #050505;
   padding: 20px;
   scrollbar-width: thin;
+  border-left: 1px solid rgba(255, 0, 0, 0.25);
+  box-shadow:
+    -4px 0 12px rgba(255, 0, 0, 0.12);
+}
+
+#video-link img {
+  width: 70%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .scroll-item {

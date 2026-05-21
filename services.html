@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo-name-square.jpeg">
+    <title>Our Services</title>
+</head>
+
+<!-- FIXED TOP NAV -->
+<header class="top-bar">
+    <div class="logo"> <img src="/images/logo-name-square.jpeg" alt="logo image"> 
+      <h1>Scorpion Records</h1>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="services.html">Services and Music</a>
+    </nav>
+  </header>
+  
+<body>
+    
+</body>
+<script>
+            
+    const animatedText = document.querySelectorAll('.slide-left, .slide-right');
+    const observer = new IntersectionObserver((entries) => {
+     entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+     }
+    });
+    }, {
+        threshold: 0.1
+       });
+     animatedText.forEach((element) => {
+     observer.observe(element);
+     });
+            
+  </script>
+</html>
