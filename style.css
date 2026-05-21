@@ -133,8 +133,8 @@ body {
 }
 
 .left-side-banner {
-  width: 75px;
-  height: 30px;
+  width: 85px;
+  height: 20px;
   object-fit: contain;
   border-radius: 8px;
   display: block;
@@ -143,14 +143,14 @@ body {
     opacity 0.3s ease,
     box-shadow 0.3s ease;
   box-shadow:
-    0 4px 15px rgba(0,0,0,0.35);
+    0 4px 15px rgba(255, 0, 0, 0.12);
 }
 
 .left-side-banner:hover {
   transform: scale(1.08);
   opacity: 0.9;
   box-shadow:
-    0 0 15px rgba(255, 0, 0, 0.35);
+    15 15 15px rgba(255, 0, 0, 0.35);
 }
 
 /* =========================
