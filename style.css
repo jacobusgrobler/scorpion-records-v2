@@ -275,11 +275,11 @@ body {
   }
   /* services page */
   .services-container {
-    padding-top: 5%;
+    padding-top: 2%;
   }
 
   .services {
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: clamp(2.0rem, 5vw, 4rem);
   }
 }
