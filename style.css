@@ -107,7 +107,7 @@ body {
   padding-top: 90px;
   background-image:
     linear-gradient(
-      rgba(0,0,0,0.45),
+      rgba(18, 18, 18, 0.45),
       rgba(0,0,0,0.55)
     ),
     url("images/music-culture-forever-portrate.jpeg");
@@ -118,6 +118,7 @@ body {
 
 .left-side-social-banner {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -128,15 +129,15 @@ body {
   padding: 6px 24px;
   background: rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(8px);
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 3px 3px;
   z-index: 10;
 }
 
 .left-side-banner {
-  width: 85px;
-  height: 20px;
-  object-fit: contain;
-  border-radius: 8px;
+  width: 45px;
+  height: 33px;
+  object-fit: block;
+  border-radius: 3px;
   display: block;
   transition:
     transform 0.3s ease,
@@ -257,6 +258,9 @@ body {
   .split-layout {
     flex-direction: column;
   }
+  .desktop-background-image {
+    display: none;
+  }
 
   .left-panel {
     position: relative;
@@ -264,6 +268,20 @@ body {
     height: 60vh;
     top: 0;
     background-size: cover;
+    background-image:
+    linear-gradient(
+      rgba(18, 18, 18, 0.45),
+      rgba(0,0,0,0.55)
+    ),
+    url("images/music-culture-forever-portrate.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 55%;
+  }
+
+  .left-side-banner {
+    width: 20px;
+    height: 15px;
   }
 
   .right-panel {
