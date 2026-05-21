@@ -8,8 +8,8 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  /* font-family: 'Bungee Tint', sans-serif; */
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
   background: black;
   color: white;
 }
@@ -31,6 +31,9 @@ body {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+  box-shadow:
+    -4px 0 12px rgba(255, 0, 0, 0.12);
 }
 
 .logo {
@@ -93,9 +96,15 @@ body {
 
 .left-panel {
   width: 66.666%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 70px);
   position: sticky;
   top: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 90px;
   background-image:
     linear-gradient(
       rgba(0,0,0,0.45),
@@ -104,12 +113,44 @@ body {
     url("images/music-culture-forever-portrate.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
+  background-position: center 55%;
+}
+
+.left-side-social-banner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  gap: 40px;
+  padding: 6px 24px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.left-side-banner {
+  width: 75px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.35);
+}
+
+.left-side-banner:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+  box-shadow:
+    0 0 15px rgba(255, 0, 0, 0.35);
 }
 
 /* =========================
